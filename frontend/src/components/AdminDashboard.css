@@ -1,0 +1,219 @@
+/* Admin Dashboard Layout */
+.admin-dashboard-page {
+    height: 100vh;
+    width: 100%;
+    max-width: 1500px;
+    margin-top: 0px;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  
+  h1 {
+    margin-top: 50px;
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 2.5rem;
+  }
+  
+  h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+  }
+  
+  /* Event List Layout */
+  .events-list {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    padding-left: 100px;
+    padding-right: 100px;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;  
+  }
+  
+  /* Event Card Styles */
+  .event-card {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    box-sizing: border-box;
+    height: 200px;
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    z-index: 1; 
+    box-shadow: none; 
+  }
+  
+  /* Zoomed event card when editing */
+  .event-card.zoomed {
+    height: 500px;  
+    width: 400px;  
+    transform: scale(1.2); 
+    position: absolute;  
+    top: 50%;  
+    left: 50%;  
+    transform: translate(-50%, -50%); 
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); 
+    z-index: 10; 
+    overflow: visible; 
+  }
+  
+  .event-card .event-card-content {
+    transition: all 0.3s ease; 
+    transform: scale(1);  
+  }
+  
+  /* Event Card Title */
+  .event-card h2 {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    
+  }
+  
+  /* Event Card Description */
+  .event-card p {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    color:gray;
+  }
+  
+  /* Buttons Layout: Side by Side */
+  .event-card .button-container {
+    display: flex;
+    justify-content: center;
+    padding:15px;
+    width: 100%; 
+    justify-content: space-between; 
+  }
+  
+  /* Button Styles */
+  .event-card button {
+    margin-top: 10px;
+    padding: 8px 12px;
+    width: 100px; 
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center; 
+  }
+  
+  /* Button Colors */
+  .event-card .Edit {
+    background-color: #28a745;
+    color: white;
+    margin-right:20px;
+  }
+  
+  .event-card .Delete {
+    background-color: red;
+    color: white;
+    padding: 10px 20px; 
+  }
+  
+  /* Edit Form Styles */
+  .event-card input,
+  .event-card textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+    box-sizing: border-box;
+  }
+  
+  .event-card input[type="file"] {
+    padding: 5px;
+    margin: 10px 0;
+  }
+  
+  /* Save & Cancel Button Styles */
+  .event-card button.save-button {
+    background-color: #28a745;
+    margin-right: 10px;
+    padding: 10px 20px;
+    
+  }
+  
+  .event-card button.cancel-button {
+    background-color: #f44336;
+    padding: 10px 20px;
+  }
+  
+  /* Smooth Transition for Edit Form */
+  .event-card .edit-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s ease-in-out; 
+    max-height: 600px; 
+    overflow: hidden;
+  }
+  
+  .event-card .edit-form input,
+  .event-card .edit-form textarea {
+    margin-bottom: 15px; 
+  }
+  
+  .event-card button:hover {
+    background-color: #0056b3;
+    color: white;
+  }
+  
+  /* Footer */
+  footer {
+    width: 100vw;
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+    position: relative;
+    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Footer Content */
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    width: 100%;
+    max-width: 1200px;
+  }
+  
+  /* Footer Bottom */
+  .footer-bottom {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #333;
+    width: 100%;
+  }
+  
+  /* Footer Bottom Text */
+  .footer-bottom p {
+    margin: 0;
+    font-size: 0.9rem;
+  } 
