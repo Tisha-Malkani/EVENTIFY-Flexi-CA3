@@ -12,6 +12,9 @@ Eventify is a full-stack web application that allows users to manage events easi
 - **User Dashboard**: A personalized dashboard for managing user-created events, with edit and delete options.
 - **Real-time Database Sync**: All event updates are immediately reflected across the platform.
 
+## Figma Design
+
+A single page of the application was designed and cloned in Figma to visualize the UI and refine layout and styling before development.
 
 ## Setup Instructions
 
